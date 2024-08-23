@@ -1,0 +1,184 @@
+ /* Elements
+Universal selector reset */
+*{  
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
+  font-weight: 50;
+  overflow-x: hidden;
+}
+
+body{
+    background: #808080;
+}
+
+/* Layout */
+
+.header{
+    display: flex;
+    background-color: #07AAEF;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 6px solid black;
+    border-bottom-right-radius: 27px;
+    border-bottom-left-radius: 27px;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding-top: -10px;
+    height: 70vh;
+    align-items: center;
+    /* border: 2px dotted red; */
+    overflow-y: hidden;
+}
+
+.text {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    margin-bottom: 10px;
+    margin-top: 60px;
+    /* border: 2px dotted red; */
+}
+
+button{
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #07AAEF;
+    border: 6px solid black;
+    color: white;
+    font-size: 40px;
+    border-radius: 27px;
+} 
+
+button:hover{
+    background-color: #285163;
+}
+
+.img{
+    animation: shake 2s ease;
+}
+
+@keyframes shake{
+    0% { transform: translateX(0) rotate(0deg) }
+    5% { transform: translateX(50px) translateY(20px) rotate(10deg) }
+    10% { transform: translateX(-50px) translateY(-10px) rotate(-10deg) }
+    15% { transform: translateX(50px) translateY(-3px) rotate(10deg) }
+    20% { transform: translateX(-50px) translateY(-4px) rotate(-10deg) }
+    25% { transform: translateX(50px) translateY(10px) rotate(10deg) }
+    30% { transform: translateX(-50px) translateY(-10px) rotate(-10deg) }
+    35% { transform: translateX(50px) translateY(5px) rotate(10deg) }
+    40% { transform: translateX(-50px) translateY(9px) rotate(-10deg) }
+    45% { transform: translateX(50px) translateY(-2px) rotate(10deg) }
+    50% { transform: translateX(-50px) translateY(10px) rotate(-10deg) }
+    55% { transform: translateX(50px) translateY(12px) rotate(10deg) }
+    60% { transform: translateX(-50px) translateY(9px) rotate(-10deg) }
+    65% { transform: translateX(50px) translateY(-4px) rotate(10deg) }
+    70% { transform: translateX(-50px) translateY(7px) rotate(-10deg) }
+    75% { transform: translateX(50px) translateY(1px) rotate(10deg) }
+    80% { transform: translateX(-50px) translateY(-18px) rotate(-10deg) }
+    85% { transform: translateX(50px) translateY(14px) rotate(10deg) }
+    90% { transform: translateX(-50px) translateY(-12px) rotate(-10deg) }
+    95% { transform: translateX(50px) translateY(14px) rotate(10deg) }
+    100% { transform: translateX(0) rotate(0deg) }
+   }
+
+.messagebox{
+    opacity: 0;
+    position: absolute;
+    animation: fade-in 2s linear;
+    animation-fill-mode: forwards;
+    width: 140px;
+    height: 140px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+@keyframes fade-in{
+    0% {opacity: 0;}
+    100%{opacity:1;}
+}
+
+/* Typography */
+h1{
+    font-size: 60px;
+    text-align: center;
+    color: white;
+}
+
+h2{
+    font-size: 20px;
+}
+
+p{
+    font-size: 25px;
+    text-align: center;
+    color: white;   
+}
+
+/* Media Query */
+@media only screen and (min-width: 810px) and (max-width: 1080px) {
+.header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left:10px;
+    margin-right: 10px;   
+}
+
+
+
+.container{
+    padding-top: -10px;
+    height: auto;
+    /* border: 2px dotted red; */
+}
+
+button{
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    background-color: #07AAEF;
+    border: 6px solid black;
+    color: white;
+    font-size: 50px;
+}
+
+.messagebox{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    margin-top: 10px;
+    animation: fade-in 2s linear;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes fade{
+    0% {opacity: 0;}
+    100%{opacity:1;}
+}
+
+p{
+    font-size: 25px;
+}
+
+img{
+    width: 70%;
+}
+
+.message{
+    animation: fade 1s linear;
+    animation-fill-mode: forwards; 
+}
+}

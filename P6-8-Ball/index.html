@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magic 8-Ball</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <div class="header"><h1>MAGIC 8-BALL</h1></div>
+    <div class="container">
+        <img class="8ball" id="8ball" src="./assets/images/magic8ball.png"><!--width="30%"-->
+        <div class="messagebox" id="message_container">
+            <p class="message" id="message"></p>
+            </div>
+    </div>
+    <div class="text">
+        <!-- <input type="text" id="question" name="Name" value="" placeholder="Ask a question..." style="border: 4px solid black;"> -->
+        <button type="button" class="button" id="button" onclick="getFortune()">SHAKE!</button> 
+        <button type="button" id="refresh" onclick="refreshPage()">Refresh 8-Ball</button>
+    </div>
+</body>
+</html>
